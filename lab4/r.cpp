@@ -1,0 +1,31 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main(){
+    int n, m;
+    cin >> n >> m;
+
+    int a[n][m];
+
+    for(int i=0; i<n; i++){
+        for(int j=0; j<m; j++){
+            cin >> a[i][j];
+        }
+    }
+
+    for(int i=0; i<n; i++){
+        for(int j=0; j<m; j++){
+            if(pow(a[i][j], 0.5) == int(pow(a[i][j], 0.5))){
+                a[i][j] = pow(a[i][j], 0.5);
+                cout << a[i][j] << " ";
+            }
+            else{
+                cout << a[i][j] << " ";
+            }
+        }
+        cout << endl;
+    }
+    return 0;
+}
